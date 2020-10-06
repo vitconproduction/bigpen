@@ -11,13 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "html-to-text": "^5.1.1",
     "jsdom": "^16.4.0",
     "readability-nodejs": "0.0.2",
-    "request": "^2.88.2",
-    "sync-request": "^6.1.0",
-    "underscore": "^1.9.1",
-    "unfluff": "^3.2.0"
+    "sync-request": "^6.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
