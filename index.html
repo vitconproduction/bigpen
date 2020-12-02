@@ -1,0 +1,105 @@
+
+  <!DOCTYPE html>
+  <html>
+  
+  <head>
+  
+    
+  <body translate=&quot;no&quot; >
+    <!-- JS, Popper.js, and jQuery -->
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="/style.css" >
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="script.js" crossorigin="anonymous"></script>
+
+<a class="button-search"><img src="https://static.thenounproject.com/png/425426-200.png" width="50px"/></a>
+<div class="container search-container">
+<form>
+  <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Custom URL" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-primary btn-getstart" type="button" id="button-addon2">Get Start</button>
+  </div>
+</div>
+  
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">URL</label>
+  </div>
+  
+</form>
+
+<div class="result d-none">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="pills-Overview-tab" data-toggle="pill" href="#pills-Overview" role="tab" aria-controls="pills-Overview" aria-selected="true">Overview</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-Tags-tab" data-toggle="pill" href="#pills-Tags" role="tab" aria-controls="pills-Tags" aria-selected="false">Tags</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Entity v1</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Entity v2</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Entity v2</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">LSI keyword</a>
+          </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="Overview-home" role="tabpanel" aria-labelledby="pills-Overview-tab">
+        </div>
+        <div class="tab-pane fade" id="pills-Tags" role="tabpanel" aria-labelledby="pills-Tags-tab">
+                <form>
+                        <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cách Lọc</button>
+                                  <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Có chứa</a>
+                                    <a class="dropdown-item" href="#">Không có chứa</a>
+                                  </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                <div class="input-group-append">
+                                        <button class="btn btn-primary btn-getstart" type="button" id="button-addon2">Filter</button>
+                                      </div>
+                                    
+                            </div>
+                      </form>
+            
+            <div class="formbuilder-checkbox-group form-group field-checkbox-group-1591711060764"><label for="checkbox-group-1591711060764" class="formbuilder-checkbox-group-label"></label>
+                    <div class="checkbox-group">
+                        <div class="formbuilder-checkbox"><input name="checkbox-group-1591711060764[]" access="false" id="checkbox-group-1591711060764-0" value="H1" type="checkbox" checked="checked"><label for="checkbox-group-1591711060764-0">H1</label></div>
+                        <div class="formbuilder-checkbox"><input name="checkbox-group-1591711060764[]" access="false" id="checkbox-group-1591711060764-1" value="H2" type="checkbox" checked="checked"><label for="checkbox-group-1591711060764-1">H2</label></div>
+                        <div class="formbuilder-checkbox"><input name="checkbox-group-1591711060764[]" access="false" id="checkbox-group-1591711060764-2" value="H3" type="checkbox" checked="checked"><label for="checkbox-group-1591711060764-2">H3</label></div>
+                        <div class="formbuilder-checkbox"><input name="checkbox-group-1591711060764[]" access="false" id="checkbox-group-1591711060764-3" value="H4" type="checkbox" checked="checked"><label for="checkbox-group-1591711060764-3">H4</label></div>
+                        <div class="formbuilder-checkbox"><input checked="checked" name="checkbox-group-1591711060764[]" access="false" id="checkbox-group-1591711060764-4" value="STRONG" type="checkbox"><label for="checkbox-group-1591711060764-4">STRONG</label></div>
+                        <div class="formbuilder-checkbox"><input checked="checked" name="checkbox-group-1591711060764[]" access="false" id="checkbox-group-1591711060764-4" value="LI" type="checkbox"><label for="checkbox-group-1591711060764-4">LI</label></div>
+                    </div>
+                </div>
+
+        </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+      </div>
+
+</div>
+</div>
+
+    
+    
+    
+    
+  
+  </body>
+  
+  </html>
+   
