@@ -40,8 +40,17 @@ const dom = new JSDOM(resp.getBody('utf-8'));
 let reader = new readability.Readability(dom.window.document);
 let article = reader.parse();
 var vntk = require('vntk');
-var tokenizer = vntk.wordTokenizer();
-let wordarray=tokenizer.tag(article.textContent)
+var ner = vntk.ner();
+let wordarray=[]
+
+let tagarray=ner.tag(article.textContent)
+for(let i=0;i<tagarray.length;i++) {
+    let lengtharr=tagarray[i].length
+    if(lengtharr.tagarray[i][0].split(' ').length>1 || tagarray[i][lengtharr-1]!="O" )
+    {
+        wordarray.push(tagarray[i][0])
+    }
+}
     res.json({"data":wordarray});
 };
 
