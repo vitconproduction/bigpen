@@ -39,8 +39,8 @@ const dom = new JSDOM(resp.getBody('utf-8'));
 
 let reader = new readability.Readability(dom.window.document);
 let article = reader.parse();
-var vntk = require('vntk');
-var ner = vntk.ner();
+let vntk = require('vntk');
+let ner = vntk.ner();
 let wordarray=[]
 
 let tagarray=ner.tag(article.textContent)
