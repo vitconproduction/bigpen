@@ -10,7 +10,7 @@ exports.list_all_tasks = function(req, res) {
     var request = require('sync-request');
 var resp = request('GET', url, {
   headers: {
-    'user-agent': 'example-user-agent',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
   },
 });
 const jsdom = require("jsdom");
@@ -46,7 +46,7 @@ let wordarray=[]
 let tagarray=ner.tag(article.textContent)
 for(let i=0;i<tagarray.length;i++) {
     let lengtharr=tagarray[i].length
-    if(lengtharr.tagarray[i][0].split(' ').length>1 || tagarray[i][lengtharr-1]!="O" )
+    if(tagarray[i][0].split(' ').length>1 || tagarray[i][lengtharr-1]!="O" )
     {
         wordarray.push(tagarray[i][0])
     }
