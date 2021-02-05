@@ -24,6 +24,10 @@ let article = reader.parse();
 
 
 exports.list_nlp = function(req, res) {
+    try {
+       
+    
+      
     const readability = require('readability-nodejs')
 
     let url=decodeURIComponent(req.params.url)
@@ -51,7 +55,11 @@ for(let i=0;i<tagarray.length;i++) {
         wordarray.push(tagarray[i][0])
     }
 }
-    res.json({"data":wordarray});
+    
+} catch (error) {
+    console.error(error);
+    res.json({"data":[]});
+  }
 };
 
 exports.create_a_task = function(req, res) {
