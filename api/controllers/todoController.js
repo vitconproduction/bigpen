@@ -1,8 +1,28 @@
 'use strict';
 
 
+var File = require('../models/todoModel.js');
+exports.gethtml_tasks = function(req, res) {
+    var file = new File(req.body);
+ 
+    var fs = require('fs');
+    console.log(file.filename);
+    fs.readFile(file.filename+'.txt', 'utf8', (err, data) => {
+        res.json({"data":data});
+    })
+}
 
-
+exports.savehtml_tasks = function(req, res) {
+    var file = new File(req.body);
+    let bodyhtml=file.body_html;
+    let name=file.filename;
+    console.log(JSON.stringify(req.body ))
+    var fs = require('fs');
+    fs.writeFile(name+".txt", bodyhtml, 'utf8', function (err) {
+        res.json({"data":true});
+    }
+    )
+}
 exports.list_all_tasks = function(req, res) {
     const readability = require('readability-nodejs')
 
@@ -22,12 +42,8 @@ let article = reader.parse();
     res.json({"data":article});
 };
 
-
 exports.list_nlp = function(req, res) {
     try {
-       
-    
-      
     const readability = require('readability-nodejs')
 
     let url=decodeURIComponent(req.params.url)

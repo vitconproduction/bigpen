@@ -8,7 +8,11 @@ module.exports = function(app) {
   app.route('/tasks/:url')
     .get(todoList.list_all_tasks)
     .post(todoList.create_a_task);
- app.route('/nlp/:url')
+    app.route('/createhtml')
+    .post(todoList.savehtml_tasks);
+    app.route('/gethtml')
+    .post(todoList.gethtml_tasks);
+    app.route('/nlp/:url')
     .get(todoList.list_nlp)
     app.get('/bigpen',function(req,res){
       res.sendFile(path.join(__dirname+'/bigpen.html'));

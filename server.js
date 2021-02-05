@@ -8,6 +8,9 @@ var express = require('express'),
     res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PATCH, DELETE, OPTIONS');
     next();
 });
+bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.listen(port);
 var routes = require('./api/routes/todoRoutes'); //importing route
 routes(app); //register the route
