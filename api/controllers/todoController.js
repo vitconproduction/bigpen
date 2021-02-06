@@ -7,7 +7,7 @@ exports.gethtml_tasks = function(req, res) {
  
     var fs = require('fs');
     console.log(file.filename);
-    fs.readFile(file.filename+'.txt', 'utf8', (err, data) => {
+    fs.readFile(file.filename+'.html', 'utf8', (err, data) => {
         res.json({"data":data});
     })
 }
@@ -18,7 +18,7 @@ exports.savehtml_tasks = function(req, res) {
     let name=file.filename;
     console.log(JSON.stringify(req.body ))
     var fs = require('fs');
-    fs.writeFile(name+".txt", bodyhtml, 'utf8', function (err) {
+    fs.writeFile(name+".html", bodyhtml, 'utf8', function (err) {
         res.json({"data":true});
     }
     )
