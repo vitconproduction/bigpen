@@ -10,10 +10,11 @@ module.exports = function(app) {
     .post(todoList.create_a_task);
     app.route('/createhtml')
     .post(todoList.savehtml_tasks);
-    app.route('/gethtml')
-    .post(todoList.gethtml_tasks);
+
     app.route('/nlp/:url')
     .get(todoList.list_nlp)
+    app.route('/html/:url')
+    .get(todoList.gethtml_tasks)
     app.get('/bigpen',function(req,res){
       res.sendFile(path.join(__dirname+'/bigpen.html'));
     });
