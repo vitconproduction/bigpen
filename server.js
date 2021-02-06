@@ -9,8 +9,8 @@ var express = require('express'),
     next();
 });
 bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 app.listen(port);
 var routes = require('./api/routes/todoRoutes'); //importing route
