@@ -10,7 +10,8 @@ var express = require('express'),
 });
 bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
+
 app.listen(port);
 var routes = require('./api/routes/todoRoutes'); //importing route
 routes(app); //register the route
