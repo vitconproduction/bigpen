@@ -11,7 +11,7 @@ exports.savehtml_tasks = function(req, res) {
     var file = new File(req.body);
     let bodyhtml=file.body_html;
     let name=file.filename;
-    console.log(JSON.stringify(req.body ))
+   // console.log(JSON.stringify(req.body ))
     var fs = require('fs');
     fs.writeFile("public/"+name+".html", bodyhtml, 'utf8', function (err) {
         res.json({"data":true});
@@ -33,7 +33,6 @@ res.send(resp.getBody('utf-8'))
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 const dom = new JSDOM(resp.getBody('utf-8'));
-
 let reader = new readability.Readability(dom.window.document);
 let article = reader.parse();
     res.json({"data":article});
@@ -95,4 +94,3 @@ exports.delete_a_task = function(req, res) {
 
     res.json({"trieu":"vu"})
 };
-
